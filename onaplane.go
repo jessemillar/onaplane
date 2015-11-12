@@ -20,6 +20,7 @@ func main() {
 	for i := 0; i < len(content); i++ {
 		if content[i] == '_' {
 			content[i+1] = unicode.ToUpper(content[i+1])
+			content = append(content[:i], content[i+1:]...)
 		}
 	}
 
